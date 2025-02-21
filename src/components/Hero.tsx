@@ -3,47 +3,50 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className="relative isolate pt-14 dark:bg-gray-900">
-      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-600 to-purple-600 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
-      </div>
-
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Discover and Deploy AI Agents for Your Business
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-white dark:bg-gray-900">
+      <div className="w-full max-w-xl mx-auto text-center space-y-8">
+        <Image
+          src="/logo.svg"
+          alt="AI Agents Logo"
+          width={92}
+          height={30}
+          className="mx-auto dark:invert"
+        />
+        
+        <div className="space-y-6">
+          <h1 className="text-5xl font-normal text-gray-900 dark:text-white">
+            AI Agents Marketplace
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Access a curated marketplace of powerful AI agents to automate tasks, enhance productivity, and transform your business operations.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link
-              href="/marketplace"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-            >
-              Explore Marketplace
-            </Link>
-            <Link href="/docs" className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-300">
-              Learn more <span aria-hidden="true">→</span>
-            </Link>
+          <div className="flex flex-col items-center space-y-6">
+            <div className="w-full max-w-2xl relative">
+              <div className="relative rounded-full shadow-sm hover:shadow-lg transition-shadow duration-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                <Link
+                  href="/marketplace"
+                  className="w-full h-14 px-6 flex items-center text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                >
+                  <svg className="w-5 h-5 mr-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  Search AI agents...
+                </Link>
+              </div>
+            </div>
+            <div className="flex space-x-4">
+              <Link
+                href="/marketplace"
+                className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
+              >
+                Explore Marketplace
+              </Link>
+              <Link
+                href="/docs"
+                className="px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+              >
+                Documentation
+              </Link>
+            </div>
           </div>
         </div>
-
-        <div className="mt-16 flow-root sm:mt-24">
-          <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 dark:bg-white/5 dark:ring-white/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-            <Image
-              src="/dashboard-preview.png"
-              alt="App screenshot"
-              width={2432}
-              height={1442}
-              className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-        <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-purple-600 to-blue-600 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
       </div>
     </div>
   );

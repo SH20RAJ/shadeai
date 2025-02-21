@@ -6,21 +6,21 @@ const testimonials = [
     author: 'Sarah Chen',
     role: 'Director of Customer Experience',
     company: 'TechCorp Global',
-    image: '/testimonials/sarah.jpg'
+    image: '/dummy.svg'
   },
   {
     content: 'Implementing these AI agents has given us a competitive edge. The integration was seamless, and the results were immediate.',
     author: 'Michael Rodriguez',
     role: 'CTO',
     company: 'InnovateX Solutions',
-    image: '/testimonials/michael.jpg'
+    image: '/dummy.svg'
   },
   {
     content: 'The analytics and insights provided by the platform have helped us optimize our AI operations and achieve better ROI.',
     author: 'Emily Watson',
     role: 'Head of AI Strategy',
     company: 'FutureScale Inc',
-    image: '/testimonials/emily.jpg'
+    image: '/dummy.svg'
   },
 ];
 

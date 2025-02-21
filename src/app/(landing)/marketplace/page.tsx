@@ -6,7 +6,7 @@ const agents = [
     id: 1,
     name: 'Data Analysis Agent',
     description: 'Powerful AI agent for data analysis and visualization',
-    image: '/agents/data-analysis.svg',
+    image: '/dummy.svg',
     price: '100 credits',
     category: 'Data Science'
   },
@@ -14,7 +14,7 @@ const agents = [
     id: 2,
     name: 'Code Assistant',
     description: 'AI-powered coding assistant for faster development',
-    image: '/agents/code-assistant.svg',
+    image: '/dummy.svg',
     price: '150 credits',
     category: 'Development'
   },
@@ -22,7 +22,7 @@ const agents = [
     id: 3,
     name: 'Content Writer',
     description: 'Creative AI agent for content generation',
-    image: '/agents/content-writer.svg',
+    image: '/dummy.svg',
     price: '80 credits',
     category: 'Content'
   },

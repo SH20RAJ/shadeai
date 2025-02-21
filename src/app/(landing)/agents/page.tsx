@@ -7,7 +7,7 @@ const agents = [
     name: 'Data Analysis Agent',
     description: 'Powerful AI agent for data analysis and visualization',
     longDescription: 'Our Data Analysis Agent leverages advanced machine learning algorithms to process and analyze large datasets, providing actionable insights and beautiful visualizations. Perfect for businesses looking to make data-driven decisions.',
-    image: '/agents/data-analysis.svg',
+    image: '/dummy.svg',
     price: '100 credits',
     category: 'Data Science',
     features: [
@@ -23,7 +23,7 @@ const agents = [
     name: 'Code Assistant',
     description: 'AI-powered coding assistant for faster development',
     longDescription: 'The Code Assistant Agent helps developers write better code faster. With advanced code completion, bug detection, and refactoring suggestions, it\'s like having an expert programmer by your side.',
-    image: '/agents/code-assistant.svg',
+    image: '/dummy.svg',
     price: '150 credits',
     category: 'Development',
     features: [
@@ -39,7 +39,7 @@ const agents = [
     name: 'Content Writer',
     description: 'Creative AI agent for content generation',
     longDescription: 'The Content Writer Agent helps create engaging, SEO-optimized content for your website, blog, or marketing materials. It understands your brand voice and generates content that resonates with your audience.',
-    image: '/agents/content-writer.svg',
+    image: '/dummy.svg',
     price: '80 credits',
     category: 'Content',
     features: [
