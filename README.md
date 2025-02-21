@@ -40,6 +40,11 @@ Welcome to the AI Agents Marketplace, a cutting-edge platform revolutionizing th
 - Comprehensive agent documentation
 - Version control and compatibility tracking
 - Rich media integration for agent showcases
+- Deploy and sell your own AI agents
+- Request custom AI agents with reward system
+- Community-driven agent development
+- Revenue sharing for successful agent requests (1-2%)
+- Streamlined agent deployment process
 
 ### Developer Tools
 - Robust SDK and API documentation

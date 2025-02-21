@@ -6,12 +6,16 @@
 - Build the premier marketplace for AI agents
 - Foster innovation in AI agent development
 - Create a self-sustaining ecosystem of developers and users
+- Enable developers to monetize their AI agents
+- Facilitate community-driven agent development through requests
 
 ### Business Model
 - Freemium model with premium features
 - Revenue sharing with agent developers (70/30 split)
 - Enterprise licensing options
 - Subscription tiers for power users
+- Reward system for successful agent requests (1-2% revenue share)
+- Commission structure for marketplace transactions
 
 ## Core Features & Architecture
 

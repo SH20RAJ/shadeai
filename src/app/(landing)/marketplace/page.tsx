@@ -37,8 +37,28 @@ export default function Marketplace() {
             AI Agents Marketplace
           </h1>
           <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
-            Discover and deploy powerful AI agents for your business
+            Discover, deploy, and sell powerful AI agents for your business
           </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <Link
+              href="/deploy"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              Deploy Your Agent
+            </Link>
+            <Link
+              href="/sell"
+              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              Start Selling
+            </Link>
+            <Link
+              href="/request"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
+            >
+              Request AI Agent
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
