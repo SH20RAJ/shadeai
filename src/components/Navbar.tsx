@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+const navigation = [
+  { name: 'Marketplace', href: '/marketplace' },
+  { name: 'Agents', href: '/agents' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Docs', href: '/docs' },
+];
+
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
@@ -20,18 +27,15 @@ export default function Navbar() {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/marketplace" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">
-              Marketplace
-            </Link>
-            <Link href="/agents" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">
-              Agents
-            </Link>
-            <Link href="/pricing" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">
-              Pricing
-            </Link>
-            <Link href="/docs" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition">
-              Docs
-            </Link>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center space-x-4">

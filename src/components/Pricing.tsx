@@ -2,17 +2,17 @@ import Link from 'next/link';
 
 const tiers = [
   {
-    name: 'Starter',
-    id: 'tier-starter',
+    name: 'Pay As You Go',
+    id: 'tier-payg',
     href: '/signup',
-    price: { monthly: '$99' },
-    description: 'Perfect for small teams getting started with AI automation.',
+    price: { credits: '$1' },
+    description: 'Perfect for teams who want flexible AI agent usage with credit-based pricing.',
     features: [
-      '5 AI Agents',
-      '100,000 API calls/month',
+      'Get 100 credits for $1',
+      'Access to all AI Agents',
+      'Pay only for what you use',
       'Basic analytics',
-      'Email support',
-      'Community access'
+      'Community support'
     ],
     featured: false
   },
@@ -54,15 +54,15 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <div className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+    <div className="py-20 sm:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Pricing</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+          <h2 className="text-base font-medium text-blue-600 dark:text-blue-400">Pricing</h2>
+          <p className="mt-3 text-4xl font-normal tracking-tight text-gray-900 dark:text-white sm:text-5xl">
             Choose the right plan for your business
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-gray-300">
+        <p className="mx-auto mt-5 max-w-2xl text-center text-base leading-7 text-gray-600 dark:text-gray-300">
           Flexible pricing options to support your AI automation journey, from startups to enterprise organizations.
         </p>
 
@@ -70,7 +70,7 @@ export default function Pricing() {
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className={`relative rounded-3xl p-8 ring-1 ring-gray-900/10 dark:ring-white/10 ${tier.featured ? 'bg-blue-600 text-white lg:order-first lg:col-span-1' : 'bg-white dark:bg-gray-900'} transform transition-all hover:scale-105 hover:shadow-xl`}
+              className={`relative rounded-lg p-8 ${tier.featured ? 'bg-blue-600 text-white lg:order-first lg:col-span-1' : 'bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-white/10'} transform transition-all duration-300 hover:shadow-lg hover:translate-y-[-4px]`}
             >
               <div className="flex items-center justify-between gap-x-4">
                 <h3 className={`text-lg font-semibold leading-8 ${tier.featured ? 'text-white' : 'text-gray-900 dark:text-white'}`}>
@@ -81,8 +81,8 @@ export default function Pricing() {
                 {tier.description}
               </p>
               <p className="mt-6 flex items-baseline gap-x-1">
-                <span className={`text-4xl font-bold tracking-tight ${tier.featured ? 'text-white' : 'text-gray-900 dark:text-white'}`}>{tier.price.monthly}</span>
-                <span className={`text-sm font-semibold leading-6 ${tier.featured ? 'text-blue-100' : 'text-gray-600 dark:text-gray-300'}`}>/month</span>
+                <span className={`text-4xl font-bold tracking-tight ${tier.featured ? 'text-white' : 'text-gray-900 dark:text-white'}`}>{tier.price.monthly || tier.price.credits}</span>
+                <span className={`text-sm font-semibold leading-6 ${tier.featured ? 'text-blue-100' : 'text-gray-600 dark:text-gray-300'}`}>{tier.name === 'Pay As You Go' ? ' for 100 credits' : tier.name !== 'Enterprise' ? '/month' : ''}</span>
               </p>
               <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
                 {tier.features.map((feature) => (
